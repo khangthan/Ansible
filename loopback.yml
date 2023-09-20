@@ -1,6 +1,6 @@
 ---
 - name: dat ip cho loobpack
-  hosts: khang_router # tên của thiết bị trong Ansible server( vì ở đây chỉ có router nên có thể để all)
+  hosts: khang-router # tên của thiết bị trong Ansible server( vì ở đây chỉ có router nên có thể để all)
   gather_facts: no
 # các tác vụ
   tasks:
