@@ -1,6 +1,6 @@
 ---
 - name: tao vlan
-  hosts: all
+  hosts: khang-switch
   gather_facts: no
 
   tasks:
