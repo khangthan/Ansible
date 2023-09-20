@@ -1,12 +1,12 @@
 ---
 - name: dat ip cho loobpack
-  hosts: all # tên của thiết bị trong Ansible server( vì ở đây chỉ có router nên có thể để all)
+  hosts: khang-router # tên của thiết bị trong Ansible server( vì ở đây chỉ có router nên có thể để all)
 # các tác vụ
   tasks:
     - name: Set loopback IPv4 address # Đặt tên task để quản lý
       ios_l3_interface: # do cấu hình router nên bắt buộc khai báo như vậy
-        name: loopback {{ item.name }} # tên cổng
-        ipv4: 10.0.{{ item.number }}.1/24 # địa chỉ IP của loopback
+        name: loopback 2 # tên cổng
+        ipv4: 10.0.0.1/24 # địa chỉ IP của loopback
       with_items:
 	- { name: "0", number: 0}
 	- { name: "1", number: 1}
